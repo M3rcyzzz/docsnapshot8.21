@@ -1,0 +1,399 @@
+---
+sidebar_position: 4
+---
+
+## Overview
+
+  
+  <p>Object instance is a specific instance of an object template.</p>
+  
+  
+  <div className="wp-block-group">
+  
+    <ul>
+      <li>
+        Multiple instances can inherit from a same template and link one or more
+        function sets.
+      </li>
+      <li>
+        Each instance can have its own property, service, event and subscription
+        aside from those inherited from the parent template and function set.
+      </li>
+    </ul>
+ 
+
+## Creating Entity Instance
+  
+    
+<p>
+      Create an instance of a specific entity such as a collector source point
+      or a tag to inherit from the parent template, and then obtain required
+      data from custom script or bound data source and service.
+    </p>
+    
+
+    
+<ol>
+      <li>
+        Log in to the supOS platform, and then click{" "}
+        <img
+          src="https://freezonex.io/wp-content/uploads/2022/06/7.png"
+          alt=""
+        />{" "}
+        to go to the design center.
+      </li>
+      <li>
+        Select <strong>Object Model</strong> <strong>Management</strong> &gt;{" "}
+        <strong>Object Instance</strong>&gt;
+        <strong>Entity Template</strong>.
+      </li>
+      <li>
+        Select a template, and then click <strong>New</strong> to add an
+        instance.
+      </li>
+      <li>
+        Enter the basic information of the instance and then click{" "}
+        <strong>Save</strong>.
+      <ul className="li-ul">
+      <li>
+        <strong>Alias</strong>: Unique ID of the instance. Tag number is
+        generally used for factory equipment.
+      </li>
+      <li>
+        <strong>Code</strong>: Code of the instance. Keep it the same as the
+        actual equipment code.
+      </li>
+    </ul></li>
+    </ol>
+   
+
+
+:::info
+  
+Sub templates under embedded templates are unavailable.
+Parameters of basic information are similar to those of an entity template. For details, see <a href="Creating Object Template#general-parameter">General Parameter</a>.
+
+:::
+
+      
+  
+
+   
+  </div>
+
+  <figure className="wp-block-image size-large">
+    <img
+      src="https://www.freezonex.io/wp-content/uploads/2022/08/12-642x1024.png"
+      alt=""
+      className="wp-image-1936"
+    />
+  </figure>
+  
+ 
+  <ol start={5}>
+    <li>
+      Configure property, service, event and subscription of the instance.
+
+:::info
+
+Refer to 
+<a href="http://entity-template" data-type="URL" data-id="entity-template">
+Creating Entity Template
+</a>{" "}
+for details. Following procedures explain the operation of binding data
+source and obtaining calculated data.
+
+:::
+  
+  
+  <ol className="li-ol">
+    <li>
+      Click <strong>Attributes</strong>, and then select an attribute.
+    </li>
+    <li>
+      Click <strong>Setup </strong>next to <strong>Data Sources </strong>under{" "}
+      <strong>Attribute Info</strong>, and then select a{" "}
+      <strong>Type of Data Processing</strong>.
+    <ul className="li-li-li">
+    <li>
+      <strong>Associative Binding</strong>: Link one or more embedded properties
+      or external properties from instances as data source, and then set a
+      custom expression to get the property value.
+    <figure className="wp-block-image size-large">
+    <img
+      src="https://www.freezonex.io/wp-content/uploads/2022/08/13-910x1024.png"
+      alt=""
+      className="wp-image-1937"
+    />
+  </figure></li>
+  <li>
+      <strong>Attribute Aggregation Statistics</strong>: Select a property from
+      an instance, and set rules of aggregate statistics to get the property
+      value.
+    
+    <figure className="wp-block-image size-full">
+    <img
+      src="https://www.freezonex.io/wp-content/uploads/2022/08/14.png"
+      alt=""
+      className="wp-image-1938"
+    />
+  </figure>
+  
+  
+  <p className="table-title">Table 3 Entity instance data binding description</p>
+  
+  
+  <figure className="wp-block-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Parameter</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Start Time/End Time</td>
+          <td>
+            Begin and end time of a calculation. The calculation continues if
+            you leave the end time empty till you manually clear the data
+            source.
+          </td>
+        </tr>
+        <tr>
+          <td>Statistical Period</td>
+          <td>
+            Calculation runs at each cycle.
+            <br />
+            For example, set it to 1 hour, the calculation returns a result
+            every hour and the return time is displayed as the beginning of a
+            cycle.
+          </td>
+        </tr>
+        <tr>
+          <td>Marking Cycle</td>
+          <td>
+            Changes return time of results.
+            <br />
+            For example, the maximum value is returned at 12:00:00, set
+            <strong>Marking</strong> <strong>Cycle</strong> to{" "}
+            <strong>Delay 1 Statistical Period</strong>, and then the result is
+            returned at 13:00:00 in display.
+          </td>
+        </tr>
+        <tr>
+          <td>Statistical Methods</td>
+          <td>
+            You can calculate the instant, maximum, minimum, average, sum and
+            difference value of the selected property.
+          </td>
+        </tr>
+        <tr>
+          <td>Statistics Configuration</td>
+          <td>
+            Only available when calculating instant value. <br />
+            Select <strong>Calculation</strong>
+            <strong>Begin</strong>, the first instant value calculated in each
+            cycle is returned; select
+            <strong>Calculation</strong> <strong>End</strong>, the last instant
+            value calculated in each cycle is returned.
+          </td>
+        </tr>
+        <tr>
+          <td>Instantaneous Time</td>
+          <td>
+            Only available when calculating instant value. Changes return time
+            of results to the exact time.
+            <br />
+            For example, an instant value is returned at 12:31:09, select{" "}
+            <strong>Instantaneous Time</strong>, and then the result is returned
+            at 12:31:09 instead of the begin time of a calculate cycle.
+          </td>
+        </tr>
+        <tr>
+          <td>Max. Time/Min. Time</td>
+          <td>
+            Only available when calculating maximum or minimum value. Select it
+            to change the return time of results to the exact time.
+          </td>
+        </tr>
+        <tr>
+          <td>Back to 0 Rule</td>
+          <td>
+            Enable it, and the platform returns difference after restore the
+            value to original. For example, the value on a meter goes to 0, and
+            a difference will be returned after the meter value is restored to
+            original. Otherwise, the difference will be negative.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </figure>
+
+:::info
+  
+<strong>Instantaneous Time</strong>, <strong>Max. Time</strong> and{" "}
+<strong>Min. Time</strong> are mutually exclusive with{" "}
+<strong>Marking Cycle</strong>.
+
+:::
+
+</li>
+  </ul>
+ 
+</li>
+  <li>
+      Set related expressions or rules of data process, and then click{" "}
+      <strong>OK</strong>.
+    </li></ol></li>
+  </ol>
+ 
+
+  
+
+
+  <ol start={3} className="li-ol">
+    
+  </ol>
+ 
+  
+  <p className="li-title">Related Operations</p>
+  
+
+  <ul>
+    <li>
+      You can search for, import, export, move, copy and delete instances, and
+      view instance details.
+    </li>
+    <li>
+      On <strong>Attributes </strong>list, hover over the attribute{" "}
+      <strong>Value</strong> to view its
+      <strong>Value</strong>, <strong>Status</strong> <strong>Code</strong> and{" "}
+      <strong>Generation Time</strong>.
+      <p className="table-title">Table 4 Status code description</p>
+  
+  
+  <figure className="wp-block-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Normal</td>
+        </tr>
+        <tr>
+          <td>8000000000000000</td>
+          <td>Data connection error</td>
+        </tr>
+        <tr>
+          <td>4000000000000000</td>
+          <td>Calculation error</td>
+        </tr>
+        <tr>
+          <td>2000000000000000</td>
+          <td>Data quality error</td>
+        </tr>
+        <tr>
+          <td>1000000000000000</td>
+          <td>
+            Time series data exceeds authorized limit and the current tag does
+            not have authorized quota
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </figure>
+  </li>
+  </ul>
+ 
+  
+
+  
+  ## Creating Form Instance
+
+
+  
+  <ol id="block-1a2b4e53-c179-4cf2-a869-688098086df3">
+    <li>
+      Log in to the supOS platform, and then click{" "}
+      <img src="https://freezonex.io/wp-content/uploads/2022/06/7.png" alt="" />{" "}
+      to go to the design center.
+    </li>
+    <li>
+      Select <strong>Object Model</strong> <strong>Management</strong> &gt;{" "}
+      <strong>Object Instance</strong>&gt;
+      <strong>Form Template</strong>.
+    </li>
+    <li>
+      Select a template, and then click <strong>New </strong>to add an instance.
+    </li>
+    <li>
+      Enter the basic information of the instance and then click{" "}
+      <strong>Save</strong>.
+    <p className="info">
+    Refer to <a href="#create-entity-instance">Creating Entity Instance</a> for
+    details of form instance creation.
+  </p></li>
+  </ol>
+ 
+  
+  
+  
+  
+  <p className="li-title">Related Operations</p>
+  
+
+  <ul>
+    <li>You can import, export and delete form instances and view details.</li>
+    <li>
+      Refer to <em>jsql</em> <em>Query Manua</em>l for detailed grammar of form
+      template data query.
+    </li>
+  </ul>
+ 
+
+
+## Creating Relation Instance
+
+
+
+  
+  <ol id="block-1a2b4e53-c179-4cf2-a869-688098086df3">
+    <li>
+      Log in to the supOS platform, and then click{" "}
+      <img src="https://freezonex.io/wp-content/uploads/2022/06/7.png" alt="" />{" "}
+      to go to the design center.
+    </li>
+    <li>
+      Select <strong>Object Model</strong> <strong>Management</strong> &gt;{" "}
+      <strong>Object Instance</strong>&gt;
+      <strong>Relation Template</strong>.
+    </li>
+    <li>
+      Select a template, and then click <strong>New</strong> to add an instance.
+    </li>
+    <li>
+      Enter the basic information of the instance, select a{" "}
+      <strong>Link Group</strong> and instances from the linked templates.
+    </li>
+    <li>
+      Select <strong>Status </strong>of the relation instance, and then click{" "}
+      <strong>OK</strong>.
+    </li>
+  </ol>
+ 
+
+  <figure className="wp-block-image size-full">
+    <img
+      src="https://www.freezonex.io/wp-content/uploads/2022/08/15.png"
+      alt=""
+      className="wp-image-1940"
+    />
+  </figure>
+
+  

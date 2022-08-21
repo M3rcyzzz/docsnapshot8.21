@@ -1,0 +1,236 @@
+---
+sidebar_position: 4
+
+---
+
+<div>
+  <section className="section">
+    <p>
+      The time series data connected to the supOS platform can access another
+      supOS platform through UUID authentication.
+    </p>
+    <p>
+      Through the platform cascading function, the data on the supOS platform
+      deployed on an enterprise can be reported to a upper-level general
+      platform in a periodic and aperiodic manner.
+    </p>
+    <p>
+      You can integrate, analyze and view the reported data on the general
+      platform. Data cascade is often used between the head factory and its
+      branches.
+    </p>
+
+
+:::info
+
+Data cascade is only available
+      between supOS platforms with the same version.
+
+:::
+
+  </section>
+  <section>
+    <ol>
+      <li>
+        <span>Authorize the supOS platform for receiving cascading data.</span>
+        <ol
+          type="a"
+          id="authorizing_cascading_data_collector__substeps_yxy_fwd_ytb"
+        >
+          <li className="substepexpand">
+            <span>
+              Log in to the supOS platform deployed on the head factory, and
+              then click{" "}
+              <img
+                id="authorizing_cascading_data_collector__image_stf_xfd_ytb"
+                src="https://wordpressfreezonex.oss-cn-hangzhou.aliyuncs.com/platform/
+7.png"
+              /> at the upper-right corner to go to the design center.
+            </span>
+          </li>
+          <li className="substepexpand">
+            <span>
+              Select{" "}
+              <span className="menucascade">
+                <strong>Collection Node Management</strong> > <strong>Authentication</strong>
+              </span>
+              .
+            </span>
+          </li>
+          <li className="substepexpand">
+            <span>
+              Click{" "}
+              <img
+                id="authorizing_cascading_data_collector__image_ott_mgd_ytb"
+                src="https://wordpressfreezonex.oss-cn-hangzhou.aliyuncs.com/platform/
+16.png"
+              />
+              , and then enter the corresponding information to add a collector.
+            </span>
+            <div>
+              <ul id="authorizing_cascading_data_collector__ul_u2m_mjd_ytb">
+                <li>
+                  Click <strong>Generate</strong> to get a new
+                  UUID.
+                </li>
+                <li>
+                  Set the <strong>Type</strong> to <strong>GRPC Gateway</strong>.
+                </li>
+                <li>
+                  Select the <strong>Timestamp</strong> to be
+                  recorded in the data.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <figure
+                className="fignone"
+                id="authorizing_cascading_data_collector__fig_ink_qgd_ytb"
+              >
+                <img
+                  id="authorizing_cascading_data_collector__image_qdt_tgd_ytb"
+                  src="https://wordpressfreezonex.oss-cn-hangzhou.aliyuncs.com/platform/18.png
+"
+                />
+              </figure>
+            </div>
+          </li>
+          <li className="substepexpand">
+            <span>
+              Click <strong>OK</strong>.
+            </span>
+            <div>
+              The status of the GRPC gateway is <strong>Pending</strong>.
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <span>
+          Configure the cascade information on another supOS platform to send
+          the connected time series data.
+        </span>
+        <ol
+          type="a"
+          id="authorizing_cascading_data_collector__substeps_qns_4wd_ytb"
+        >
+          <li className="substepexpand">
+            <span>
+              Log in to the supOS platform deployed on a branch factory, and
+              then click{" "}
+              <img
+                id="authorizing_cascading_data_collector__image_q3n_rwd_ytb"
+                src="https://wordpressfreezonex.oss-cn-hangzhou.aliyuncs.com/platform/
+7.png"
+              />{" "}
+              at the upper-right corner to go the design center.
+            </span>
+          </li>
+          <li className="substepexpand">
+            <span>
+              Click{" "}
+              <img
+                id="authorizing_cascading_data_collector__image_rs1_zvd_ytb"
+                src="https://wordpressfreezonex.oss-cn-hangzhou.aliyuncs.com/platform/
+6.png"
+              />{" "}
+              at the upper-right corner, and then select <strong>System Information Management</strong>.
+            </span>
+          </li>
+          <li className="substepexpand">
+            <span>
+              Under <strong>Cascading Setup</strong>, enter
+              the information.
+            </span>
+            <div>
+              <ul id="authorizing_cascading_data_collector__ul_srn_2xd_ytb">
+                <li>
+                  <strong>Server Address</strong>:
+                  <ul id="authorizing_cascading_data_collector__ul_tt4_dp2_ytb">
+                    <li>
+                      Enter the address of the supOS server for standalone
+                      deployment.
+                    </li>
+                    <li>
+                      Enter the address of k8s workermain node server for
+                      cluster deployment.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Name</strong>/
+                  <strong>UUID</strong>: The set name and
+                  generated UUID on the receiver supOS platform.
+                </li>
+                <li>
+                  <strong>Server Port</strong>: The default
+                  cascading port.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <figure
+                className="fignone"
+                id="authorizing_cascading_data_collector__fig_lgf_ywd_ytb"
+              >
+                <img
+                  id="authorizing_cascading_data_collector__image_mgf_ywd_ytb"
+                  src="https://wordpressfreezonex.oss-cn-hangzhou.aliyuncs.com/platform/
+19.png"
+                />
+              </figure>
+            </div>
+          </li>
+          <li className="substepexpand">
+            <span>
+              Click <strong>OK</strong>.
+            </span>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <span>Authorize the collector on the receiver supOS platform.</span>
+        <ol
+          type="a"
+          id="authorizing_cascading_data_collector__substeps_dr5_pxd_ytb"
+        >
+          <li className="substepexpand">
+            <span>
+              Log in to the supOS platform deployed on the head factory, and
+              then click{" "}
+              <img
+                id="authorizing_cascading_data_collector__image_kxn_rxd_ytb"
+                src="https://wordpressfreezonex.oss-cn-hangzhou.aliyuncs.com/platform/
+7.png"
+              />{" "}
+              at the upper-right corner to go the design center.
+            </span>
+          </li>
+          <li className="substepexpand">
+            <span>
+              Select{" "}
+              <span className="menucascade">
+                <strong>Collection Node Management</strong> > <strong>Status</strong>
+              </span>
+              .
+            </span>
+          </li>
+          <li className="substepexpand">
+            <span>
+              Select the GRPC gateway you just added, view the details and then
+              click <strong>OK</strong>.
+            </span>
+            <div>
+              Under{" "}
+              <span className="menucascade">
+                <strong>Object Model Management</strong> > <strong>Object Instance</strong> > <strong>Entity Template</strong> > <strong>Collector Template</strong>
+              </span>
+              , a new object instance is added with the same name as the GRPC
+              gateway authorization, and all the collected data is displayed.
+            </div>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </section>
+</div>

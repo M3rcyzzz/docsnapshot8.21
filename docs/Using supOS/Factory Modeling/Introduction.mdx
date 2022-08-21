@@ -1,0 +1,126 @@
+---
+sidebar_position: 1
+---
+
+## Overview
+
+  
+  <p>
+    Through the object model management provided by the supOS platform, the
+    digital modeling of production units such as workshops, staff, equipment,
+    products and materials in the factory is realized.
+  </p>
+  
+  
+  <ul>
+    <li>
+      Create models based on the features of equipment in the factory, to manage
+      and apply the business information such as attributes, operating status,
+      maintenance records and fault records.
+    </li>
+    <li>
+      The object models describe the job responsibilities of different roles in
+      the factory, and features of various materials.
+    </li>
+  </ul>
+
+  ## Object Model
+
+
+   <p>
+    A complete object model contains an object template, an object instance and
+    a function set, representing the corresponding product type, specific
+    product and product functions respectively. For each model, you need to
+    configure the following parameters.
+  </p>
+  
+
+  <ul>
+    <li>
+      <strong>Basic Information</strong>: Describes the model name, aliases,
+      parent templates, function sets, and details.
+    </li>
+  </ul>
+ 
+
+
+:::info
+
+
+Object aliases must be unique under one name space (APP or system).
+
+:::
+  
+
+  <ul>
+    <li>
+      <strong>Attributes</strong>: Describes attributes of object instances.{" "}
+      <ul className="li-ul">
+    <li>
+      <strong>Attribute Info</strong>: Displays the current status of an object
+      instance, such as device name, device number, temperature, pressure and
+      speed.
+    </li>
+    <li>
+      <strong>Alarm</strong> <strong>rules</strong>: Defines rules of alarm
+      events. When the collected data is updated, the supOS platform judges
+      whether to trigger an alarm based on the rules.
+    </li>
+  </ul>
+    </li>
+  </ul>
+ 
+
+  
+ 
+
+  <ul>
+    <li>
+      <strong>Services</strong>: Functions that you can use instance properties
+      to realize.
+      <ul className="li-ul">
+    <li>You can define one or more services for each object instance.</li>
+    <li>Services can be used by other features on the platform.</li>
+  </ul>
+    </li>
+  </ul>
+ 
+
+  <ul>
+    <li>
+      <strong>Events</strong>: Messages sent by object instances and subscribed
+      by external parties.
+      <ul className="li-ul">
+    <li>
+      An event is triggered when the data source changes or the configured logic
+      applies.
+    </li>
+    <li>
+      A subscriber who listens to the event should be created during modeling.
+    </li>
+    <li>
+      A data set containing the event-triggering field must be linked with the
+      event.
+    </li>
+  </ul>
+    </li>
+  </ul>
+
+:::info
+
+Field names in the data set must be the same as aliases of the instance
+    properties.
+:::
+
+  <ul>
+    <li>
+      <strong>Subscriptions</strong>: Receives and responses to events.
+      <ul className="li-ul">
+    <li>
+      Uses data set linked with the event to define reactions based on business
+      logic.
+    </li>
+    <li>The same event can be subscribed by multiple subscribers.</li>
+  </ul>
+    </li>
+  </ul>

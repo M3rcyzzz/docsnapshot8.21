@@ -1,0 +1,439 @@
+---
+sidebar_position: 4
+---
+
+### Creating Function Set
+
+  
+  <ol>
+    <li>
+      Log in to the supOS platform, and then click{" "}
+      <img src="https://freezonex.io/wp-content/uploads/2022/06/7.png" alt="" />{" "}
+      to go to the design center.
+    </li>
+    <li>
+      Select <strong>Object Model</strong> <strong>Management</strong> &gt;{" "}
+      <strong>Function Set </strong>&gt;
+      <strong>Function Set</strong>.
+    </li>
+    <li>
+      Select a template, and then click{" "}
+      <img
+        src="https://freezonex.io/wp-content/uploads/2022/06/26.png"
+        alt=""
+      />{" "}
+      to add a function set.
+    </li>
+    <li>
+      Enter the basic information of the function set and then click{" "}
+      <strong>OK</strong>.
+    <ul className="li-ul">
+    <li>
+      Operations of creating a function set are similar to template creation.
+      For details, see{" "}
+      <a
+        href="Creating Object Template#creating-entity-template"
+        data-type="internal"
+        data-id="#entity_template"
+      >
+        Creating Entity Template
+      </a>
+      .
+    </li>
+    <li>
+      A function set can be bound with templates and instances during creation.
+    </li>
+    <li>
+      Select a function set, and then click{" "}
+      <strong>Sync Reference Template</strong> to synchronize changes of the
+      function set to bound templates and instances.
+    </li>
+  </ul></li>
+  </ol>
+ 
+
+  
+ 
+
+
+:::info
+  
+When a function set is updated, the supOS platform will not synchronize changes to templates and instances that have bound with it.
+
+:::
+    
+
+  
+
+  ### Creating Tag
+
+  
+  <p>
+    Create tags to filter and search for templates, instances, properties,
+    services, events and subscriptions.
+  </p>
+  
+  
+  <p className="li-title">Procedure</p>
+  
+  
+  <ol>
+    <li>
+      Log in to the supOS platform, and then click{" "}
+      <img src="https://freezonex.io/wp-content/uploads/2022/06/7.png" alt="" />{" "}
+      to go to the design center.
+    </li>
+    <li>
+      Select <strong>Object Model</strong> <strong>Management</strong> &gt;{" "}
+      <strong>
+        <strong>Tag</strong>Management
+      </strong>
+      .
+    </li>
+    <li>
+      Click{" "}
+      <img
+        src="https://freezonex.io/wp-content/uploads/2022/06/26.png"
+        alt=""
+      />{" "}
+      next to <strong>Tag Management</strong>.
+    </li>
+    <li>
+      Enter name, alias and remarks of the tag category, select whether the tag
+      is visible to other APPs on the prompted window, and then click{" "}
+      <strong>OK</strong>.
+    </li>
+    <li>
+      Select a label category, and then click <strong>New </strong>on the right.
+    </li>
+    <li>
+      Enter basic information of the label, and then click <strong>OK</strong>.
+    </li>
+  </ol>
+ 
+
+  <figure className="wp-block-image size-large">
+    <img
+      src="https://www.freezonex.io/wp-content/uploads/2022/08/16-819x1024.png"
+      alt=""
+      className="wp-image-1944"
+    />
+  </figure>
+  
+  
+  <p className="li-title">Related Operations</p>
+  
+  
+  <p>
+    Click <strong>Edit</strong> or <strong>Delete</strong> under{" "}
+    <strong>Operate</strong> to edit or delete the corresponding label.
+  </p>
+  
+
+### Creating Data Set
+
+  
+  <p id="dataSet">
+    You can define data sets to bind with events in object models, and receive
+    messages related to the bound data set when events are triggered.
+  </p>
+  
+  
+  <p className="li-title">Procedure</p>
+  
+  
+  <ol>
+    <li>
+      Log in to the supOS platform, and then click{" "}
+      <img src="https://freezonex.io/wp-content/uploads/2022/06/7.png" alt="" />{" "}
+      to go to the design center.
+    </li>
+    <li>
+      Select <strong>Object Model</strong> <strong>Management</strong> &gt;{" "}
+      <strong>Data Set</strong>.
+    </li>
+    <li>
+      Click <strong>New</strong>.
+    </li>
+    <li>
+      Enter basic information of the data set, and then click{" "}
+      <strong>OK</strong>.
+    </li>
+    <li>
+      Click the data set again, and then click the{" "}
+      <strong>Field Definition</strong> tab.
+    </li>
+    <li>
+      Click <strong>New</strong>, enter field property information such as name,
+      alias, data type and default value, and then click <strong>OK</strong>.
+    </li>
+  </ol>
+
+:::info
+  
+<ul className="note-list">
+    <li>Multiple fields are available.</li>
+    <li>
+      Add fields to bound data sets that have generated data by event
+      triggering, data belongs to new fields will be empty.
+    </li>
+  </ul>
+
+:::
+  
+
+  <figure className="wp-block-image size-full">
+    <img
+      src="https://www.freezonex.io/wp-content/uploads/2022/08/17.png"
+      alt=""
+      className="wp-image-1945"
+    />
+  </figure>
+  
+  
+  <ol start={7}>
+    <li>
+      Click <strong>OK</strong>.
+    </li>
+  </ol>
+ 
+  
+  <p className="li-title">Related Operations</p>
+  
+
+  <ul>
+    <li>
+      Click <strong>Delete</strong> or <strong>View</strong> under{" "}
+      <strong>Operate </strong>to delete or view the details of data sets.
+    </li>
+    <li>
+      Click <strong>Edit</strong> or <strong>Delete </strong>under{" "}
+      <strong>Operate </strong>on <strong>Field Definition</strong> page to edit
+      or delete fields.
+    </li>
+  </ul>
+ 
+
+
+:::info
+  
+Bound data sets cannot be deleted.
+
+:::
+
+  
+
+  ### Creating Data Group
+
+  
+  <p>
+    Group and manage data permission of object instance properties. When you
+    select different groups, you can get different permissions on instance
+    property.
+  </p>
+  
+
+  <ul>
+    <li>
+      You cannot see object properties that you have no permission of in design
+      center or object selector.
+    </li>
+    <li>
+      You cannot see corresponding data of properties that you have no
+      permission of in operation center.
+    </li>
+  </ul>
+
+
+
+:::info
+  
+Data groups can only be applied to entity instances.
+
+:::
+
+  
+  
+  <p className="li-title">Procedure</p>
+  
+  
+  <ol>
+    <li>
+      Log in to the supOS platform, and then click{" "}
+      <img src="https://freezonex.io/wp-content/uploads/2022/06/7.png" alt="" />{" "}
+      to go to the design center.
+    </li>
+    <li>
+      Select <strong>Object Model</strong> <strong>Management</strong> &gt;{" "}
+      <strong>Data Group</strong>.
+    </li>
+    <li>
+      Click <strong>New</strong>.
+    </li>
+    <li>
+      Enter basic information of the data set, and then click{" "}
+      <strong>Save</strong>.
+    </li>
+    <li>
+      Select the <strong>Permission Config</strong> tab, click{" "}
+      <img
+        src="https://freezonex.io/wp-content/uploads/2022/06/26.png"
+        alt=""
+      />{" "}
+      next to <strong>Template Config</strong>to select a template.
+    <p className="info">
+    Select templates of instances that contain properties you need.
+  </p></li>
+  </ol>
+ 
+  
+  
+  
+  
+  <ol start={6}>
+    <li>
+      Click the <strong>Base Object</strong> tab, and then select a template to
+      configure property permissions.
+    <ul className="li-ul">
+    <li>
+      On the right side, select <strong>All</strong> <strong>Instances </strong>
+      to grant permissions to properties of all instances under the template.
+    </li>
+    <li>
+      Click <strong>Partial Instances</strong> to grant permissions to
+      properties of selected instances under the template.
+    <ol className="li-li-li">
+    <li>
+      Click <strong>New </strong>to select instances, and then click{" "}
+      <strong>OK</strong>.
+    </li>
+    <li>
+      Click <strong>Attributes </strong>under <strong>Operate </strong>to select
+      all or partial properties of the instance.
+    </li>
+    <li>
+      Click <strong>OK </strong>after selecting needed properties.
+    </li>
+    <li>
+      Click<strong> Alarm Permission</strong> under <strong>Operate </strong>of
+      selected property to configure alarm permissions, and then click{" "}
+      <strong>OK</strong>.
+    </li>
+    <li>
+      Click <strong>Close</strong>.
+    </li>
+  </ol>
+</li>
+  </ul></li>
+  </ol>
+ 
+
+  
+ 
+
+  
+
+:::info
+  
+Alarm data can be viewed in operation center, but not used to build templates.
+
+::: 
+    
+  
+
+  <figure className="wp-block-image size-large">
+    <img
+      src="https://www.freezonex.io/wp-content/uploads/2022/08/18-1024x606.png"
+      alt=""
+      className="wp-image-1946"
+    />
+  </figure>
+  
+  
+  <p className="li-title">Related Operations</p>
+  
+
+  <ul>
+    <li>
+      You can grant permissions under <strong>Configured </strong>tab.
+    </li>
+    <li>
+      Click <strong>Delete</strong> corresponds to property, instance and data
+      groups to delete them.
+    </li>
+    <li>
+      Click <strong>Details</strong> to view data group details.
+    </li>
+    <li>Cancel selections of alarms to cancel granting alarm permissions.</li>
+  </ul>
+ 
+  
+
+:::info
+
+<ul className="note-list">
+    <li>Bound data sets cannot be deleted.</li>
+    <li>
+      Data groups are used to grant permissions to users or roles. For details,
+      see{" "}
+      <strong>User Security Management</strong> in{" "}
+      <em>supOS Platform User Manual.</em>
+    </li>
+</ul>
+
+::: 
+ 
+ 
+
+  ### Managing Tasks
+
+  
+  <p>
+    View information of subscription tasks in <strong>Task Management</strong>,
+    such as last execution and failure log.
+  </p>
+  
+  
+  <ol>
+    <li>
+      Log in to the supOS platform, and then click{" "}
+      <img src="https://freezonex.io/wp-content/uploads/2022/06/7.png" alt="" />{" "}
+      to go to the design center.
+    </li>
+    <li>
+      Select <strong>Object Model</strong> <strong>Management</strong> &gt;{" "}
+      <strong>Task Management</strong>.
+    </li>
+    <li>
+      Click{" "}
+      <img
+        className="wp-image-955"
+        style={{ width: 33 }}
+        src="https://freezonex.io/wp-content/uploads/2022/07/4.png"
+        alt=""
+      />{" "}
+      and enter key words of subscription, and then press Enter.
+    <p className="info">You can view the task records of each subscription.</p></li><li>
+      (Optional) Click <strong>Failed Execution History </strong>under{" "}
+      <strong>Operate </strong>for failed tasks, and then check the failure
+      reason and click <strong>Run Again </strong>to manually execute the task
+      again.
+    </li>
+  </ol>
+ 
+  
+  
+  
+  
+  <ol start={4}>
+    
+  </ol>
+ 
+
+  <figure className="wp-block-image size-large">
+    <img
+      src="https://www.freezonex.io/wp-content/uploads/2022/08/19-1024x80.png"
+      alt=""
+      className="wp-image-1947"
+    />
+  </figure>

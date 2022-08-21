@@ -1,0 +1,291 @@
+---
+sidebar_position: 5
+
+---
+
+<>
+  <div>
+    <p>
+      Authorize the third party gateway, get data from it and provide the data
+      to APPs developed on the supOS platform.
+    </p>
+  </div>
+  <article
+    className="nested3"
+    aria-labelledby="ariaid-title8"
+    id="authorizing_third_party_gateway"
+  >
+
+:::info
+
+Access of third party gateways is supported through supLake.
+
+
+:::
+
+<ol>
+<li className="stepexpand">
+            <span>
+              Log in to the supOS platform, and then click{" "}
+              <img
+                id="authorizing_third_party_gateway__image_stf_xfd_ytb"
+                src="https://wordpressfreezonex.oss-cn-hangzhou.aliyuncs.com/platform/7.png"
+              />{" "}
+              at the upper-right corner to go the design center.
+            </span>
+          </li>
+          <li className="stepexpand">
+            <span>
+              Select{" "}
+              <span className="menucascade">
+                <strong>Collection Node Management</strong> > <strong>Authentication</strong>
+              </span>
+              .
+            </span>
+          </li>
+          <li className="stepexpand">
+            <span>
+              Click{" "}
+              <img
+                id="authorizing_third_party_gateway__image_ott_mgd_ytb"
+                src="https://wordpressfreezonex.oss-cn-hangzhou.aliyuncs.com/platform/
+16.png"
+              />
+              , and then enter the corresponding information to add a collector.
+            </span>
+            <div>
+              <ul id="authorizing_third_party_gateway__ul_u2m_mjd_ytb">
+                <li>
+                  Click <strong>Generate</strong> to get a new
+                  UUID.
+                </li>
+                <li>
+                  Set the <strong>Type</strong> to{" "}
+                  <strong>IOT Gateway</strong>.
+                </li>
+                <li>
+                  Select the <strong>Timestamp</strong> to be
+                  recorded in the data.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <figure
+                className="fignone"
+                id="authorizing_third_party_gateway__fig_ink_qgd_ytb"
+              >
+                <img
+                  id="authorizing_third_party_gateway__image_qdt_tgd_ytb"
+                  src="https://wordpressfreezonex.oss-cn-hangzhou.aliyuncs.com/platform/
+20.png"
+                />
+              </figure>
+            </div>
+          </li>
+          <li className="stepexpand">
+            <span>
+              Click <strong>OK</strong>.
+            </span>
+            <div>
+              The status of the IOT gateway is{" "}
+              <strong>Pending</strong>.
+            </div>
+          </li>
+          <li className="stepexpand">
+            <span>
+              Log in to the management console of the third party gateway, and
+              go to <strong>MQTT Forwarding Service</strong>.
+            </span>
+          </li>
+          <li className="stepexpand">
+            <span>
+              Select <strong>Bluetron MQTT Forwarding</strong>{" "}
+              from the service list, enter the corresponding information and
+              then click <strong>OK</strong>.
+            </span>
+            <div>
+              <figure
+                className="fignone"
+                id="authorizing_third_party_gateway__fig_y5r_q42_ytb"
+              >
+                <img
+                  id="authorizing_third_party_gateway__image_z5r_q42_ytb"
+                  src="https://wordpressfreezonex.oss-cn-hangzhou.aliyuncs.com/platform/
+21.png"
+                />
+              </figure>
+            </div>
+            <div>
+              <table
+                id="authorizing_third_party_gateway__table_cj3_y42_ytb"
+                className="frame-all"
+              >
+                <caption>
+                  <span className="table--title-label">Table 3. </span>
+                  <span>MQTT forwarding service parameters</span>
+                </caption>
+                <colgroup>
+                  <col style={{ width: "23.474178403755868%" }} />
+                  <col style={{ width: "76.52582159624413%" }} />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th
+                      className="colsep-1 rowsep-1"
+                      id="authorizing_third_party_gateway__table_cj3_y42_ytb__entry__1"
+                    >
+                      Parameter
+                    </th>
+                    <th
+                      className="colsep-1 rowsep-1"
+                      id="authorizing_third_party_gateway__table_cj3_y42_ytb__entry__2"
+                    >
+                      Description
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      className="colsep-1 rowsep-1"
+                      headers="authorizing_third_party_gateway__table_cj3_y42_ytb__entry__1"
+                    >
+                      Forwarding Address
+                    </td>
+                    <td
+                      className="colsep-1 rowsep-1"
+                      headers="authorizing_third_party_gateway__table_cj3_y42_ytb__entry__2"
+                    >
+                      <ul id="authorizing_third_party_gateway__ul_tt4_dp2_ytb">
+                        <li>
+                          Enter the address of the supOS server for standalone
+                          deployment.
+                        </li>
+                        <li>
+                          Enter the address of k8s workermain node server for
+                          cluster deployment.
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      className="colsep-1 rowsep-1"
+                      headers="authorizing_third_party_gateway__table_cj3_y42_ytb__entry__1"
+                    >
+                      Port
+                    </td>
+                    <td
+                      className="colsep-1 rowsep-1"
+                      headers="authorizing_third_party_gateway__table_cj3_y42_ytb__entry__2"
+                    >
+                      Leave it as default.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      className="colsep-1 rowsep-1"
+                      headers="authorizing_third_party_gateway__table_cj3_y42_ytb__entry__1"
+                    >
+                      Forwarding Cycle
+                    </td>
+                    <td
+                      className="colsep-1 rowsep-1"
+                      headers="authorizing_third_party_gateway__table_cj3_y42_ytb__entry__2"
+                    >
+                      Set the cycle of data forwarding.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      className="colsep-1 rowsep-1"
+                      headers="authorizing_third_party_gateway__table_cj3_y42_ytb__entry__1"
+                    >
+                      Auth Token
+                    </td>
+                    <td
+                      className="colsep-1 rowsep-1"
+                      headers="authorizing_third_party_gateway__table_cj3_y42_ytb__entry__2"
+                    >
+                      Enter the UUID generated on the supOS platform.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      className="colsep-1 rowsep-1"
+                      headers="authorizing_third_party_gateway__table_cj3_y42_ytb__entry__1"
+                    >
+                      Endpoint ID
+                    </td>
+                    <td
+                      className="colsep-1 rowsep-1"
+                      headers="authorizing_third_party_gateway__table_cj3_y42_ytb__entry__2"
+                    >
+                      Set the unique ID.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      className="colsep-1 rowsep-1"
+                      headers="authorizing_third_party_gateway__table_cj3_y42_ytb__entry__1"
+                    >
+                      Endpoint Name
+                    </td>
+                    <td
+                      className="colsep-1 rowsep-1"
+                      headers="authorizing_third_party_gateway__table_cj3_y42_ytb__entry__2"
+                    >
+                      Enter the name of the authorization created on the supOS
+                      platform.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </li>
+          <li className="stepexpand">
+            <span>
+              On the supOS platform, select{" "}
+              <span className="menucascade">
+                <strong>Collection Node Management</strong> > <strong>Status</strong>
+              </span>
+              .
+            </span>
+          </li>
+          <li className="stepexpand">
+            <span>
+              Select the IOT gateway you just added, view the details and then
+              click <strong>OK</strong>.
+            </span>
+            <div>
+              Under{" "}
+              <span className="menucascade">
+                <strong>Object Model Management</strong> > <strong>Object Instance</strong> > <strong>Entity Template</strong> > <strong>Collector Template</strong>
+              </span>
+              , a new object instance is added with the same name as the IOT
+              gateway authorization, and all the collected data is displayed.
+            </div>
+            <div>
+             
+            </div>
+          </li>
+        </ol>
+
+:::info
+
+If you want to delete a third party gateway, go to
+ <span className="menucascade">
+<strong>Collection Node Management</strong> > <strong>Status</strong>
+</span>
+                , delete the gateway, change the status of the gateway under{" "}
+                <span className="menucascade">
+                  <strong>Collection Node Management</strong> > <strong>Authentication</strong>
+                </span>{" "}
+                to <strong>Offline</strong>, and then delete
+                it in the <strong>Authentication</strong>{" "}
+                section.
+
+
+:::
+  </article>
+</>

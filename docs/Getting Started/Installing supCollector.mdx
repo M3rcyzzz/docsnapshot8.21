@@ -1,0 +1,239 @@
+---
+sidebar_position: 2
+
+---
+<>
+  
+  <h1>Installation Preparation</h1>
+  
+  
+  <p>
+    Prepare the following before installation:
+  </p>
+  
+  
+  <ul>
+    <li>A server</li>
+    <li>
+      Installation package
+      (supCollector-Vx.xx.xx.xx-xxxxxxxx-C.exe)
+    </li>
+    <li>Firewall (Recommended)</li>
+    <li>UPS (Recommended)</li>
+    <li>Local area network or Internet</li>
+  </ul>
+  
+
+
+:::info
+
+  <ul className="caution-list">
+    <li>
+      We recommend to prepare a server dedicated for supCollector only.{" "}
+    </li>
+    <li>
+      Install servers and network devices in a dedicated computer room or
+      cabinet.
+    </li>
+    <li>UPS is recommended with electrostatic grounding.</li>
+    <li>
+      Make sure that servers and network devices are connected while using
+      supCollector to avoid system operation interruptions or data loss due to accidental power failures.
+    </li>
+  </ul>
+:::
+
+
+
+## supCollector Installation
+
+  <p>
+    This chapter describes the installation procedures of supCollector. Before
+    installation, confirm the server IP address, subnet mask, default
+    gateway and DNS server address.
+  </p>
+
+  
+  ### Notes
+  
+  
+  <ul>
+    <li>
+      Disable the automatic update service of Windows on supCollector server.
+      For details, see{" "}
+      <a href="#Disable-Windows-Update-Service">
+        Disable Windows Update Service
+      </a>
+      .
+    </li>
+    <li>
+      Download and install service packs before installing supCollector on
+      Windows Server 2012 system. For details, see{" "}
+      <a href="https://www.freezonex.io/wp-admin/post.php?post=1966&action=edit#Appendix-B">
+        Solutions for "You need to install Updates corresponding to KB2919355
+        first" at .Net installation
+      </a>
+      .
+    </li>
+    <li>
+      On Windows7（32-bit）or windows Server 2008, .Net Framework cannot be
+      automatically installed. In that case, refer to appendix{" "}
+      <a href="https://www.freezonex.io/wp-admin/post.php?post=635&action=edit#A-Certificate-Chain">
+        Solutions for "A Certificate Chain Could Not be Built to a Trusted Root
+        Authority" at the installation of .Net Framework
+      </a>{" "}
+      before installing supCollector.
+    </li>
+    <li>
+      Disable Windows firewall and third-party security software before
+      installing supCollector. You can add it to anti-virus software allowlist
+      after installation. For details, see{" "}
+      <a href="https://www.freezonex.io/wp-admin/post.php?post=1966&action=edit#Allowlist">
+        Chapter 4 supCollector Allowlist Setting
+      </a>
+      .
+    </li>
+    <li>
+      Log in to supCollector server locally with admin account and make sure it
+      stays online, to ensure the supCollector works properly.
+    </li>
+  </ul>
+  
+
+
+### Installing supCollector
+
+
+
+  <ol>
+    <li>
+      Double-click the installation file, and then follow instructions of the
+      installation wizard to install supCollector.
+    </li>
+  </ol>
+  
+  {/* wp:list {"start":9} */}
+  <ul start={9}>
+    <li>
+      Make sure the installation path of supCollector has no Chinese characters.
+    </li>
+    <li>
+      Make sure to select the right supOS platform version to which supCollector
+      connects.
+    </li>
+    <li>
+      During installation, .Net Framework 4.6.2 will be automatically installed.
+      If it already exists, click <strong>Close</strong> or{" "}
+      <strong>Cancel</strong> to continue installation.
+    </li>
+  </ul>
+  
+  {/* wp:list {"ordered":true,"start":2} */}
+  <ol start={2}>
+    <li>Restart the system to complete installation.</li>
+  </ol>
+  
+
+
+:::info
+
+If <strong>nginx</strong> is not enabled, check whether the IIS server on Windows occupies the port 80.
+
+:::
+  
+
+
+### Restarting supCollector Services
+  
+  
+  <p>After installation, make sure the following services are running.</p>
+  
+  
+  <ul>
+    <li>supos_breakpad: Supos breakpad service</li>
+    <li>supos_collector: Supos collector service </li>
+    <li>supos_nginx: Supos nginx service</li>
+    <li>supos_videocollector: Supos video collector service</li>
+    <li>supos_aecollector: Supos OPC AE collector service</li>
+  </ul>
+  
+  {/* wp:list {"ordered":true} */}
+  <ol>
+    <li>
+      On Windows <strong>Start</strong> menu, search for{" "}
+      <strong>Services</strong>, and then check the status of services mentioned
+      above.
+    </li>
+    <li>
+      If certain service is not running, right-click it and then click{" "}
+      <strong>Restart</strong>.
+    </li>
+  </ol>
+  
+  {/* wp:heading {"level":1} */}
+
+## Logging in to supCollector
+
+
+
+  <ol>
+    <li>
+      Enter supCollector server address http://<em>IP address</em> in browser
+      (Chrome V9 and above versions are recommended).
+    </li>
+    <li>
+      Enter the default login account and password (admin/admin) and then click{" "}
+      <strong>Login</strong>.
+    </li>
+    <li>Change password on the pop-up window after login.</li>
+  </ol>
+  
+
+
+:::info
+
+If the default port 80 for supCollector is occupied, you can change it and then use the changed port and IP to log in. For details, see <a href="#port-change" data-type="internal" data-id="#port-change"> Change Port</a>.
+
+:::
+  
+
+  <figure className="wp-block-image size-full">
+    <img
+      src="https://www.freezonex.io/wp-content/uploads/2022/08/1.png"
+      alt=""
+      className="wp-image-1970"
+    />
+  </figure>
+  {/* /wp:image */}
+  {/* wp:heading {"level":1} */}
+
+## Uninstalling supCollector
+
+
+  <ol>
+    <li>
+      &nbsp;Select <strong>Control Panel &gt; Uninstall Program</strong>.
+    </li>
+    <li>
+      Right-click <strong>supCollector</strong> and then click{" "}
+      <strong>Uninstall</strong>.
+    </li>
+    <li>
+      Select whether to delete all supCollector modules, and then click{" "}
+      <strong>Yes</strong>.
+    </li>
+    <li>
+      Configuration data of supCollector will not be deleted because of
+      uninstallation of supOS.
+    </li>
+  </ol>
+  
+  
+
+:::info
+
+Design data of supCollector will not be deleted after uninstallation.
+
+:::
+
+</>
